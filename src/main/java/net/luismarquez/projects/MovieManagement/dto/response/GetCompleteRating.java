@@ -1,8 +1,8 @@
 package net.luismarquez.projects.MovieManagement.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record GetCompleteRating(
         @JsonProperty("rating_id") long ratingId,

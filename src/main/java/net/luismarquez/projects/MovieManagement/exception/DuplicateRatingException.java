@@ -1,8 +1,9 @@
 package net.luismarquez.projects.MovieManagement.exception;
 
 public class DuplicateRatingException extends RuntimeException {
-
-    private String username;
+	
+	private static final long serialVersionUID = 183224249544825057L;
+	private String username;
     private Long movieId;
 
     public DuplicateRatingException(String username, Long movieId) {

@@ -1,18 +1,27 @@
 package net.luismarquez.projects.MovieManagement.persistence.entity;
 
-import com.fasterxml.jackson.annotation.*;
-import jakarta.persistence.*;
-import net.luismarquez.projects.MovieManagement.util.MovieGenre;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import net.luismarquez.projects.MovieManagement.util.MovieGenre;
 
 @Entity
 public class Movie {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)

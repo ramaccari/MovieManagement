@@ -1,9 +1,9 @@
 package net.luismarquez.projects.MovieManagement.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.time.LocalDateTime;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record ApiError(
         @JsonProperty("http_code") int httpCode,

@@ -1,11 +1,11 @@
 package net.luismarquez.projects.MovieManagement.mapper;
 
+import java.util.List;
+
 import net.luismarquez.projects.MovieManagement.dto.request.SaveUser;
 import net.luismarquez.projects.MovieManagement.dto.response.GetUser;
 import net.luismarquez.projects.MovieManagement.dto.response.GetUserStatistic;
 import net.luismarquez.projects.MovieManagement.persistence.entity.User;
-
-import java.util.List;
 
 public class UserMapper {
 

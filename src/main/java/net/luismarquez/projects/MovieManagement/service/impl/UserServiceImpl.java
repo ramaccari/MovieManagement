@@ -1,30 +1,21 @@
 package net.luismarquez.projects.MovieManagement.service.impl;
 
-import jakarta.persistence.criteria.Predicate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import net.luismarquez.projects.MovieManagement.dto.request.SaveUser;
 import net.luismarquez.projects.MovieManagement.dto.response.GetUser;
 import net.luismarquez.projects.MovieManagement.dto.response.GetUserStatistic;
 import net.luismarquez.projects.MovieManagement.exception.ObjectNotFoundException;
 import net.luismarquez.projects.MovieManagement.mapper.UserMapper;
-import net.luismarquez.projects.MovieManagement.persistence.entity.Movie;
 import net.luismarquez.projects.MovieManagement.persistence.entity.User;
-import net.luismarquez.projects.MovieManagement.persistence.repository.MovieCrudRepository;
 import net.luismarquez.projects.MovieManagement.persistence.repository.RatingCrudRepository;
 import net.luismarquez.projects.MovieManagement.persistence.repository.UserCrudRepository;
 import net.luismarquez.projects.MovieManagement.service.UserService;
 import net.luismarquez.projects.MovieManagement.service.validator.PasswordValidator;
-import net.luismarquez.projects.MovieManagement.util.MovieGenre;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.HttpStatusCode;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
-import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
 
 @Service
 @Transactional
@@ -35,9 +26,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RatingCrudRepository ratingCrudRepository;
-
-    @Autowired
-    private MovieCrudRepository movieCrudRepository;
 
     @Transactional(readOnly = true)
     @Override

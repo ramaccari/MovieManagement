@@ -1,10 +1,10 @@
 package net.luismarquez.projects.MovieManagement.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import net.luismarquez.projects.MovieManagement.util.MovieGenre;
-
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import net.luismarquez.projects.MovieManagement.util.MovieGenre;
 
 public record GetMovieStatistic(
         Long id,

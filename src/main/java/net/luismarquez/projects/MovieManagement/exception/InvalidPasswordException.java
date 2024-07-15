@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class InvalidPasswordException extends RuntimeException {
 
-    private final String password;
+	private static final long serialVersionUID = -6577562571554812043L;
+	private final String password;
     private final String passwordRepeated;
     private final String errorDescription;
 

@@ -1,13 +1,11 @@
 package net.luismarquez.projects.MovieManagement.mapper;
 
+import java.util.List;
+
 import net.luismarquez.projects.MovieManagement.dto.request.SaveMovie;
 import net.luismarquez.projects.MovieManagement.dto.response.GetMovie;
 import net.luismarquez.projects.MovieManagement.dto.response.GetMovieStatistic;
-import net.luismarquez.projects.MovieManagement.dto.response.GetUserStatistic;
 import net.luismarquez.projects.MovieManagement.persistence.entity.Movie;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 public class MovieMapper {
 

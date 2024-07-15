@@ -1,5 +1,11 @@
 package net.luismarquez.projects.MovieManagement.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import jakarta.persistence.EntityManager;
 import net.luismarquez.projects.MovieManagement.dto.request.SaveRating;
 import net.luismarquez.projects.MovieManagement.dto.response.GetCompleteRating;
@@ -13,13 +19,6 @@ import net.luismarquez.projects.MovieManagement.persistence.entity.User;
 import net.luismarquez.projects.MovieManagement.persistence.repository.RatingCrudRepository;
 import net.luismarquez.projects.MovieManagement.service.RatingService;
 import net.luismarquez.projects.MovieManagement.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Service
 @Transactional

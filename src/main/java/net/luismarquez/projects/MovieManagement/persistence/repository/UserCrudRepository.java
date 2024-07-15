@@ -1,7 +1,7 @@
 package net.luismarquez.projects.MovieManagement.persistence.repository;
 
-import jakarta.persistence.criteria.Predicate;
-import net.luismarquez.projects.MovieManagement.persistence.entity.User;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -11,8 +11,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
-import java.util.List;
-import java.util.Optional;
+import jakarta.persistence.criteria.Predicate;
+import net.luismarquez.projects.MovieManagement.persistence.entity.User;
 
 public interface UserCrudRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {
 

@@ -1,12 +1,13 @@
 package net.luismarquez.projects.MovieManagement.dto.request;
 
+import java.io.Serializable;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
-
-import java.io.Serializable;
 
 public record SaveRating(
         @JsonProperty("movie_id") @Positive(message = "{generic.positive}") Long movieId,

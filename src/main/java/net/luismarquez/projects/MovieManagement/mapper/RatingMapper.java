@@ -1,14 +1,12 @@
 package net.luismarquez.projects.MovieManagement.mapper;
 
+import java.util.List;
+
 import net.luismarquez.projects.MovieManagement.dto.request.SaveRating;
 import net.luismarquez.projects.MovieManagement.dto.response.GetCompleteRating;
 import net.luismarquez.projects.MovieManagement.dto.response.GetMovie;
 import net.luismarquez.projects.MovieManagement.dto.response.GetUser;
 import net.luismarquez.projects.MovieManagement.persistence.entity.Rating;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 public class RatingMapper {
 

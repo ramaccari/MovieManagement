@@ -1,20 +1,25 @@
 package net.luismarquez.projects.MovieManagement.persistence.specification;
 
-import jakarta.persistence.criteria.*;
-import net.luismarquez.projects.MovieManagement.dto.request.MovieSearchCriteria;
-import net.luismarquez.projects.MovieManagement.persistence.entity.Movie;
-import net.luismarquez.projects.MovieManagement.persistence.entity.Rating;
-import net.luismarquez.projects.MovieManagement.util.MovieGenre;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.util.StringUtils;
+
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
+import jakarta.persistence.criteria.Subquery;
+import net.luismarquez.projects.MovieManagement.dto.request.MovieSearchCriteria;
+import net.luismarquez.projects.MovieManagement.persistence.entity.Movie;
+import net.luismarquez.projects.MovieManagement.persistence.entity.Rating;
+
 public class FindAllMoviesSpecification implements Specification<Movie> {
 
-    private MovieSearchCriteria searchCriteria;
+	private static final long serialVersionUID = -1191336887675491674L;
+	private MovieSearchCriteria searchCriteria;
 
     public FindAllMoviesSpecification(MovieSearchCriteria searchCriteria) {
         this.searchCriteria = searchCriteria;
@@ -86,7 +91,4 @@ public class FindAllMoviesSpecification implements Specification<Movie> {
         return averageRatingSubquery;
     }
 
-    private Subquery<Double> getAverageRatingSubQuery() {
-        return null;
-    }
 }

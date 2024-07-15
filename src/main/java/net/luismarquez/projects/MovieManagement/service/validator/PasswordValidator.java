@@ -1,11 +1,10 @@
 package net.luismarquez.projects.MovieManagement.service.validator;
 
-import net.luismarquez.projects.MovieManagement.exception.InvalidPasswordException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ResponseStatusException;
+
+import net.luismarquez.projects.MovieManagement.exception.InvalidPasswordException;
 
 public class PasswordValidator {
 

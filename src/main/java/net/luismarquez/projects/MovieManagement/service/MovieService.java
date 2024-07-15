@@ -1,11 +1,12 @@
 package net.luismarquez.projects.MovieManagement.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import net.luismarquez.projects.MovieManagement.dto.request.MovieSearchCriteria;
 import net.luismarquez.projects.MovieManagement.dto.request.SaveMovie;
 import net.luismarquez.projects.MovieManagement.dto.response.GetMovie;
 import net.luismarquez.projects.MovieManagement.dto.response.GetMovieStatistic;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 public interface MovieService {
 
