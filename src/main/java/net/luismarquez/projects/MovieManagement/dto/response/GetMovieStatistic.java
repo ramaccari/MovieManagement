@@ -18,9 +18,10 @@ public record GetMovieStatistic(
         @JsonProperty("lowest_rating") int lowestRating,
         @JsonProperty("highest_rating") int highestRating
 ) implements Serializable {
-
+		/*
         @Override
         public Double averageRatings() {
                 return Double.parseDouble(String.format("%1.2f", averageRatings));
         }
+        */
 }
